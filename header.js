@@ -5,19 +5,19 @@
   const headerHTML = `
     <header id="site-header" role="banner">
       <div class="header-inner">
-        <a href="#game" class="header-logo" aria-label="CookieClickerz Home">
+        <a href="/" class="header-logo" aria-label="CookieClicker Home">
           <span class="header-logo-icon" aria-hidden="true">🍪</span>
-          <span class="header-logo-text">CookieClickerz</span>
+          <span class="header-logo-text">Cookie Clicker</span>
         </a>
 
         <nav class="header-nav" id="main-nav" role="navigation" aria-label="Main Navigation">
-          <a href="#game">▶ Play</a>
-          <a href="#how-to-play">How to Play</a>
-          <a href="#buildings-info">Buildings</a>
-          <a href="#upgrades-info">Upgrades</a>
-          <a href="#achievements">Achievements</a>
-          <a href="#faq">FAQ</a>
-          <a href="#game" class="play-link">🍪 Play Now</a>
+          <a href="/#game">▶ Play</a>
+          <a href="/#how-to-play">How to Play</a>
+          <a href="/#buildings-info">Buildings</a>
+          <a href="/#upgrades-info">Upgrades</a>
+          <a href="/#achievements">Achievements</a>
+          <a href="/#faq">FAQ</a>
+          <a href="/#game" class="play-link">🍪 Play Now</a>
         </nav>
 
         <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu" aria-expanded="false" aria-controls="main-nav">
