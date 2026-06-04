@@ -33,6 +33,7 @@
             <h4>Pages</h4>
             <a href="/privacy">Privacy Policy</a>
             <a href="/terms">Terms of Use</a>
+            <a href="/cookies">Cookies Policy</a>
             <a href="/about">About</a>
             <a href="/contact">Contact</a>
           </div>
