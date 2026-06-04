@@ -30,11 +30,11 @@
           </div>
 
           <div class="footer-col">
-            <h4>Game Info</h4>
-            <a href="/#game">Cookie Clicker Online</a>
-            <a href="/#game">Free Cookie Game</a>
-            <a href="/#game">Idle Clicker Game</a>
-            <a href="/#game">Cookie Clicker Unblocked</a>
+            <h4>Pages</h4>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Use</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
           </div>
         </div>
 
