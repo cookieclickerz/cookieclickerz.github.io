@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="cookieGrad" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#F4C56A"/>
+      <stop offset="40%" stop-color="#D4882A"/>
+      <stop offset="100%" stop-color="#A85D10"/>
+    </radialGradient>
+    <radialGradient id="chipGrad" cx="30%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#5C3A1E"/>
+      <stop offset="100%" stop-color="#2C1A0A"/>
+    </radialGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="3" dy="6" stdDeviation="6" flood-color="rgba(100,50,0,0.4)"/>
+    </filter>
+    <radialGradient id="shineGrad" cx="35%" cy="30%" r="45%">
+      <stop offset="0%" stop-color="rgba(255,255,220,0.35)"/>
+      <stop offset="100%" stop-color="rgba(255,255,220,0)"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Main cookie body -->
+  <circle cx="100" cy="100" r="90" fill="url(#cookieGrad)" filter="url(#shadow)"/>
+
+  <!-- Cookie texture bumps -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#C47A1E" stroke-width="2" opacity="0.3"/>
+  <circle cx="100" cy="100" r="75" fill="none" stroke="#BA7018" stroke-width="1" opacity="0.2"/>
+
+  <!-- Cracks/texture lines -->
+  <path d="M60 70 Q80 90 65 115" stroke="#C47A1E" stroke-width="2" fill="none" opacity="0.4" stroke-linecap="round"/>
+  <path d="M130 60 Q145 85 135 110" stroke="#C47A1E" stroke-width="2" fill="none" opacity="0.4" stroke-linecap="round"/>
+  <path d="M70 135 Q95 125 120 140" stroke="#C47A1E" stroke-width="1.5" fill="none" opacity="0.35" stroke-linecap="round"/>
+  <path d="M95 55 Q105 70 100 90" stroke="#C47A1E" stroke-width="1.5" fill="none" opacity="0.3" stroke-linecap="round"/>
+
+  <!-- Chocolate chips -->
+  <ellipse cx="72" cy="75" rx="10" ry="8" fill="url(#chipGrad)" transform="rotate(-15,72,75)"/>
+  <ellipse cx="128" cy="72" rx="9" ry="7" fill="url(#chipGrad)" transform="rotate(10,128,72)"/>
+  <ellipse cx="58" cy="115" rx="9" ry="7" fill="url(#chipGrad)" transform="rotate(-20,58,115)"/>
+  <ellipse cx="140" cy="110" rx="10" ry="8" fill="url(#chipGrad)" transform="rotate(15,140,110)"/>
+  <ellipse cx="100" cy="130" rx="9" ry="7" fill="url(#chipGrad)" transform="rotate(5,100,130)"/>
+  <ellipse cx="88" cy="95" rx="8" ry="6" fill="url(#chipGrad)" transform="rotate(-10,88,95)"/>
+  <ellipse cx="118" cy="98" rx="8" ry="6" fill="url(#chipGrad)" transform="rotate(20,118,98)"/>
+  <ellipse cx="75" cy="148" rx="7" ry="6" fill="url(#chipGrad)" transform="rotate(-5,75,148)"/>
+  <ellipse cx="125" cy="145" rx="8" ry="6" fill="url(#chipGrad)" transform="rotate(12,125,145)"/>
+
+  <!-- Chip highlights -->
+  <ellipse cx="70" cy="72" rx="3" ry="2" fill="rgba(255,255,255,0.25)" transform="rotate(-15,70,72)"/>
+  <ellipse cx="126" cy="69" rx="3" ry="2" fill="rgba(255,255,255,0.25)" transform="rotate(10,126,69)"/>
+  <ellipse cx="56" cy="112" rx="3" ry="2" fill="rgba(255,255,255,0.25)" transform="rotate(-20,56,112)"/>
+
+  <!-- Shine overlay -->
+  <circle cx="100" cy="100" r="90" fill="url(#shineGrad)"/>
+
+  <!-- Edge highlight -->
+  <circle cx="100" cy="100" r="88" fill="none" stroke="rgba(255,220,120,0.3)" stroke-width="3"/>
+</svg>

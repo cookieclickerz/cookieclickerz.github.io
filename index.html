@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Clicker – Click to Bake Millions of Cookies | CookieClickerz</title>
+  <meta name="description" content="Play Cookie Clicker online free! The ultimate cookie clicking idle game. Bake billions of cookies, unlock upgrades, hire grandmas, build cookie factories and become the ultimate Cookie Tycoon!">
+  <meta name="keywords" content="cookie clicker, cookie clicker game, online cookie clicker, free cookie clicker, idle clicker game, cookie game, bake cookies, cookie upgrades, cookie clicker unblocked, cookie clicker online">
+  <meta name="author" content="CookieClickerz">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://cookieclickerz.github.io/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cookie Clicker – The Ultimate Idle Baking Game">
+  <meta property="og:description" content="Click cookies, unlock upgrades, and bake billions! The best free cookie clicker game online.">
+  <meta property="og:url" content="https://cookieclickerz.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://cookieclickerz.github.io/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cookie Clicker – Click to Bake Millions!">
+  <meta name="twitter:description" content="The best free online cookie clicker idle game. Bake, upgrade, and conquer!">
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Cookie Clicker",
+    "url": "https://cookieclickerz.github.io/",
+    "description": "Play Cookie Clicker online for free. An idle clicker game where you bake billions of cookies, unlock upgrades, hire grandmas, and build a cookie empire.",
+    "applicationCategory": "Game",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "genre": "Idle Game",
+    "keywords": "cookie clicker, idle game, clicker game, cookie baking game",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CookieClickerz",
+      "url": "https://cookieclickerz.github.io/"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="cookie-particles"></div>
+
+  <!-- Header injected by header.js -->
+  <div id="header-root"></div>
+
+  <!-- HERO / GAME SECTION -->
+  <section id="game" class="game-section">
+    <div class="game-container">
+      <!-- Left Panel: Cookie -->
+      <div class="cookie-panel">
+        <div class="cookie-stats">
+          <div class="stat-card">
+            <span class="stat-label">Cookies Baked</span>
+            <span class="stat-value" id="cookie-count">0</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Per Second</span>
+            <span class="stat-value" id="cps-display">0</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Per Click</span>
+            <span class="stat-value" id="cpc-display">1</span>
+          </div>
+        </div>
+
+        <div class="cookie-wrapper" id="cookie-wrapper">
+          <div class="cookie-aura"></div>
+          <img src="cookie.svg" alt="Giant Cookie – Click to Bake!" id="main-cookie" class="main-cookie" title="Click the cookie to bake!">
+          <div class="click-ripple" id="click-ripple"></div>
+        </div>
+
+        <div class="cookie-milestones">
+          <div class="milestone" id="milestone-text">Start baking your first cookie! 🍪</div>
+        </div>
+
+        <div class="power-buttons">
+          <button class="power-btn" id="golden-cookie-btn" title="Click for a Golden Cookie bonus!">✨ Golden Cookie</button>
+          <button class="power-btn btn-red" id="reset-btn" title="Reset your game">🔄 Reset</button>
+        </div>
+      </div>
+
+      <!-- Middle Panel: Upgrades -->
+      <div class="upgrades-panel">
+        <h2 class="panel-title">⚡ Upgrades</h2>
+        <div class="upgrades-list" id="upgrades-list"></div>
+      </div>
+
+      <!-- Right Panel: Buildings -->
+      <div class="buildings-panel">
+        <h2 class="panel-title">🏗️ Buildings</h2>
+        <div class="buildings-list" id="buildings-list"></div>
+      </div>
+    </div>
+
+    <!-- Floating cookie count banner -->
+    <div class="total-banner">
+      <span id="total-all-time">Total baked: 0 cookies</span>
+    </div>
+  </section>
+
+  <!-- SECTION 2: HOW TO PLAY -->
+  <section id="how-to-play" class="info-section warm-bg">
+    <div class="container">
+      <div class="section-badge">🎮 How to Play</div>
+      <h2 class="section-title">Master the Art of Cookie Clicking</h2>
+      <p class="section-subtitle">Cookie Clicker is an addictive idle clicker game that starts simple and grows into a massive cookie empire. Learn the basics and become the ultimate Cookie Tycoon.</p>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-icon">👆</div>
+          <h3>Click the Cookie</h3>
+          <p>Every click on the giant golden cookie bakes more cookies. The more you click, the faster your empire grows. Upgrade your clicking power to earn more per tap!</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">🏗️</div>
+          <h3>Buy Buildings</h3>
+          <p>Spend your cookies on buildings that automatically bake cookies for you. Start with a humble cursor and work your way up to time machines and antimatter condensers!</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">⚡</div>
+          <h3>Unlock Upgrades</h3>
+          <p>Upgrades boost your cookie production dramatically. Improve your cursors, empower your grandmas, and discover ancient cookie-baking secrets hidden in upgrades.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">✨</div>
+          <h3>Catch Golden Cookies</h3>
+          <p>Keep an eye out for special golden cookies that grant massive bonus production, multipliers, and cookie frenzy bonuses. Timing is everything in cookie clicking!</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">🏆</div>
+          <h3>Earn Achievements</h3>
+          <p>Unlock hundreds of achievements as you bake more cookies. Each achievement milestone rewards you with prestige and permanent bonuses to your production.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">♾️</div>
+          <h3>Go Infinite</h3>
+          <p>Cookie Clicker never truly ends. Keep expanding your empire, unlock new buildings, and discover just how many cookies one person can bake with enough upgrades!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: BUILDINGS SHOWCASE -->
+  <section id="buildings-info" class="info-section dark-bg">
+    <div class="container">
+      <div class="section-badge">🏗️ Cookie Empire</div>
+      <h2 class="section-title">Build Your Cookie Empire</h2>
+      <p class="section-subtitle">From a single cursor clicking away to an interdimensional cookie factory — your empire grows one building at a time.</p>
+      <div class="buildings-showcase">
+        <div class="building-card">
+          <span class="building-emoji">🖱️</span>
+          <h3>Cursor</h3>
+          <p>Auto-clicks the cookie for you. The humble beginning of every great cookie empire.</p>
+          <span class="building-cps">0.1 CPS</span>
+        </div>
+        <div class="building-card">
+          <span class="building-emoji">👵</span>
+          <h3>Grandma</h3>
+          <p>A kindly old lady who loves baking. Gets more powerful the more grandmas you have!</p>
+          <span class="building-cps">1 CPS</span>
+        </div>
+        <div class="building-card">
+          <span class="building-emoji">🌾</span>
+          <h3>Farm</h3>
+          <p>Grows cookie plants in vast fields. Organic, free-range, artisanal cookie farming.</p>
+          <span class="building-cps">8 CPS</span>
+        </div>
+        <div class="building-card">
+          <span class="building-emoji">🏭</span>
+          <h3>Factory</h3>
+          <p>Mass-produces cookies with industrial efficiency. The cookie assembly line never stops!</p>
+          <span class="building-cps">47 CPS</span>
+        </div>
+        <div class="building-card">
+          <span class="building-emoji">⛏️</span>
+          <h3>Mine</h3>
+          <p>Digs deep for cookie dough and chips. Rich veins of chocolate and butterscotch await.</p>
+          <span class="building-cps">260 CPS</span>
+        </div>
+        <div class="building-card">
+          <span class="building-emoji">🚀</span>
+          <h3>Shipment</h3>
+          <p>Imports cookies from far-off planets where cookie trees grow naturally in the wild.</p>
+          <span class="building-cps">1,400 CPS</span>
+        </div>
+        <div class="building-card">
+          <span class="building-emoji">🧪</span>
+          <h3>Alchemy Lab</h3>
+          <p>Transmutes base materials into delicious cookies. Gold into cookies into more gold!</p>
+          <span class="building-cps">7,600 CPS</span>
+        </div>
+        <div class="building-card">
+          <span class="building-emoji">🌀</span>
+          <h3>Portal</h3>
+          <p>Opens a rift to the cookieverse — a dimension made entirely of cookies and frosting.</p>
+          <span class="building-cps">44,000 CPS</span>
+        </div>
+        <div class="building-card">
+          <span class="building-emoji">⏰</span>
+          <h3>Time Machine</h3>
+          <p>Brings cookies from the future. Ethically questionable but delicious and very fast.</p>
+          <span class="building-cps">260,000 CPS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: UPGRADES INFO -->
+  <section id="upgrades-info" class="info-section pastel-bg">
+    <div class="container">
+      <div class="section-badge">⚡ Power Ups</div>
+      <h2 class="section-title">Hundreds of Cookie Upgrades</h2>
+      <p class="section-subtitle">Unlock game-changing upgrades that multiply your cookie production. From reinforced rolling pins to antimatter-powered ovens — the upgrade tree has it all.</p>
+      <div class="upgrades-showcase">
+        <div class="upgrade-pill">🍫 Chocolate Eggs</div>
+        <div class="upgrade-pill">🥛 Milk Upgrades</div>
+        <div class="upgrade-pill">⚡ Reinforced Index Finger</div>
+        <div class="upgrade-pill">👵 Forwards from Grandma</div>
+        <div class="upgrade-pill">🌾 Cookie Trees</div>
+        <div class="upgrade-pill">🍪 Sugar Lumps</div>
+        <div class="upgrade-pill">✨ Golden Cookies</div>
+        <div class="upgrade-pill">🔬 Research Centers</div>
+        <div class="upgrade-pill">🏆 Prestige Boosts</div>
+        <div class="upgrade-pill">🌌 Cosmic Upgrades</div>
+        <div class="upgrade-pill">🧬 Elder Pact</div>
+        <div class="upgrade-pill">🚀 Warp Drive Ovens</div>
+      </div>
+      <div class="upgrade-tiers">
+        <div class="tier-card tier-bronze">
+          <h3>🥉 Basic Upgrades</h3>
+          <p>Start with simple improvements to your clicking and production. Double your cursor output, improve grandma efficiency, and boost early-game buildings.</p>
+        </div>
+        <div class="tier-card tier-silver">
+          <h3>🥈 Advanced Upgrades</h3>
+          <p>Mid-game upgrades that dramatically multiply production. Research breakthroughs, industrial optimizations, and magical enhancements await dedicated bakers.</p>
+        </div>
+        <div class="tier-card tier-gold">
+          <h3>🥇 Legendary Upgrades</h3>
+          <p>End-game legendary upgrades that can multiply your entire production 100x or more. The rarest and most powerful cookies in the universe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: ACHIEVEMENTS -->
+  <section id="achievements" class="info-section dark-bg achievements-section">
+    <div class="container">
+      <div class="section-badge">🏆 Achievements</div>
+      <h2 class="section-title">Cookie Achievements & Milestones</h2>
+      <p class="section-subtitle">Track your baking journey with hundreds of achievements. Each one represents a proud milestone in your cookie-clicking career.</p>
+      <div class="achievements-grid" id="achievements-display"></div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: IDLE GAME GUIDE -->
+  <section id="idle-guide" class="info-section warm-bg">
+    <div class="container">
+      <div class="section-badge">💡 Pro Tips</div>
+      <h2 class="section-title">Cookie Clicker Strategy Guide</h2>
+      <p class="section-subtitle">Maximize your cookie production with these expert tips and strategies used by top cookie clickers around the world.</p>
+      <div class="tips-layout">
+        <div class="tips-list">
+          <div class="tip-item">
+            <div class="tip-num">01</div>
+            <div class="tip-content">
+              <h3>Always Buy the Cheapest Building First</h3>
+              <p>When starting out, focus on the most affordable buildings to maximize your cookies-per-second growth rate. Even a single grandma makes a big difference early on.</p>
+            </div>
+          </div>
+          <div class="tip-item">
+            <div class="tip-num">02</div>
+            <div class="tip-content">
+              <h3>Don't Neglect Upgrades</h3>
+              <p>Upgrades often provide more value than a new building. Check the upgrades panel regularly — a well-timed upgrade can double or triple your entire production instantly.</p>
+            </div>
+          </div>
+          <div class="tip-item">
+            <div class="tip-num">03</div>
+            <div class="tip-content">
+              <h3>Click Golden Cookies Instantly</h3>
+              <p>Golden cookies only appear for a short time and grant massive bonuses. Cookie Frenzy (7x production) and Click Frenzy (777x per click) can launch you forward hours of progress.</p>
+            </div>
+          </div>
+          <div class="tip-item">
+            <div class="tip-num">04</div>
+            <div class="tip-content">
+              <h3>Diversify Your Buildings</h3>
+              <p>Many upgrades require owning a certain number of a specific building. Keep building counts balanced so you can unlock all available upgrade paths efficiently.</p>
+            </div>
+          </div>
+          <div class="tip-item">
+            <div class="tip-num">05</div>
+            <div class="tip-content">
+              <h3>The Idle Strategy Works</h3>
+              <p>Cookie Clicker is an idle game at heart. Set up strong auto-production buildings, buy upgrades, then step away. Come back to a mountain of cookies waiting for you!</p>
+            </div>
+          </div>
+        </div>
+        <div class="tips-visual">
+          <div class="tips-cookie-display">
+            <div class="tips-cookie-anim">🍪</div>
+            <div class="tips-stats">
+              <div class="tips-stat"><span>Max CPS</span><strong>∞</strong></div>
+              <div class="tips-stat"><span>Buildings</span><strong>20+</strong></div>
+              <div class="tips-stat"><span>Upgrades</span><strong>500+</strong></div>
+              <div class="tips-stat"><span>Achievements</span><strong>100+</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: ABOUT IDLE GAMES -->
+  <section id="about-idle" class="info-section pastel-bg">
+    <div class="container">
+      <div class="section-badge">📖 About</div>
+      <h2 class="section-title">What is Cookie Clicker?</h2>
+      <div class="about-layout">
+        <div class="about-text">
+          <p>Cookie Clicker is the original idle clicker game that started a genre. First released in 2013, it pioneered the concept of incremental games where players click a cookie to earn more cookies, then use those cookies to buy buildings and upgrades that generate cookies automatically — even when you're not actively playing.</p>
+          <p>The genius of Cookie Clicker lies in its infinite scalability. What starts as clicking a simple cookie grows into managing a vast empire of grandmas, factories, time machines, and interdimensional portals — all dedicated to the singular goal of baking as many cookies as possible.</p>
+          <p>Today, Cookie Clicker remains one of the most beloved free online games with millions of players worldwide. Our version, CookieClickerz, brings you the full idle clicker experience with smooth animations, satisfying click mechanics, and all the addictive progression you love — completely free, no downloads needed.</p>
+        </div>
+        <div class="about-features">
+          <div class="feature-badge">✅ 100% Free to Play</div>
+          <div class="feature-badge">✅ No Downloads Required</div>
+          <div class="feature-badge">✅ Auto-Save Progress</div>
+          <div class="feature-badge">✅ Mobile Compatible</div>
+          <div class="feature-badge">✅ Idle/AFK Friendly</div>
+          <div class="feature-badge">✅ Infinite Replayability</div>
+          <div class="feature-badge">✅ Regular Updates</div>
+          <div class="feature-badge">✅ Achievement System</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: FAQ -->
+  <section id="faq" class="info-section dark-bg">
+    <div class="container">
+      <div class="section-badge">❓ FAQ</div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">Everything you need to know about playing Cookie Clicker online.</p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Is Cookie Clicker free to play? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a">Yes! CookieClickerz is completely free to play. There are no hidden costs, no pay-to-win mechanics, and no premium currency. Just pure cookie clicking fun for everyone.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Does my progress save automatically? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a">Absolutely. Your game progress is automatically saved to your browser's local storage every 30 seconds. You can close the browser and return later to find all your cookies and buildings exactly as you left them.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What are Golden Cookies? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a">Golden Cookies are special bonus cookies that randomly appear on screen for a limited time. Clicking them grants powerful temporary bonuses like Cookie Frenzy (7x production for 77 seconds), Click Frenzy (777x per click), or massive instant cookie rewards.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Can I play Cookie Clicker on mobile? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a">Yes! CookieClickerz is fully optimized for mobile devices. The responsive layout adapts to any screen size, and touch controls work perfectly for clicking cookies on smartphones and tablets.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What is the best strategy for early game? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a">In the early game, focus on buying Cursors and Grandmas first, then unlock their upgrades. Keep clicking the big cookie manually to boost your initial cookie count. Once you hit the Farm tier, buildings start producing enough that you can begin idling comfortably.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Is there an end to Cookie Clicker? <span class="faq-arrow">▼</span></button>
+          <div class="faq-a">Technically, no! Cookie Clicker is an infinite incremental game. There are always more cookies to bake, more buildings to buy, and more upgrades to unlock. The numbers just keep getting bigger — that's part of the addictive charm of the idle clicker genre.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Schema FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Cookie Clicker free to play?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes! CookieClickerz is completely free to play with no hidden costs." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does my progress save automatically?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, game progress saves to browser local storage every 30 seconds." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I play Cookie Clicker on mobile?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, CookieClickerz is fully mobile optimized with touch controls." }
+        }
+      ]
+    }
+    </script>
+  </section>
+
+  <!-- Footer injected by footer.js -->
+  <div id="footer-root"></div>
+
+  <!-- Golden Cookie Overlay -->
+  <div id="golden-cookie-overlay" class="golden-cookie-overlay hidden">
+    <div class="golden-cookie-popup">
+      <div class="golden-cookie-icon">✨🍪✨</div>
+      <div class="golden-cookie-msg" id="golden-cookie-msg">Cookie Frenzy!</div>
+      <div class="golden-cookie-sub" id="golden-cookie-sub">7x production for 77 seconds!</div>
+    </div>
+  </div>
+
+  <!-- Achievement Toast -->
+  <div id="achievement-toast" class="achievement-toast hidden">
+    <div class="toast-icon">🏆</div>
+    <div class="toast-text">
+      <strong id="toast-title">Achievement Unlocked!</strong>
+      <span id="toast-desc">First Cookie Baked</span>
+    </div>
+  </div>
+
+  <script src="header.js"></script>
+  <script src="footer.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
