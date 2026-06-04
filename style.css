@@ -407,7 +407,8 @@ body {
 }
 
 .upgrade-item:hover { background: rgba(244,167,42,0.1); border-color: var(--cookie-gold); transform: translateX(2px); }
-.upgrade-item.locked { opacity: 0.4; cursor: not-allowed; }
+.upgrade-item.locked { opacity: 0.35; cursor: not-allowed; }
+.upgrade-item.cant-afford { opacity: 0.55; }
 .upgrade-item.purchased { background: rgba(27, 188, 156, 0.1); border-color: rgba(27,188,156,0.4); cursor: default; }
 
 .upgrade-name {
