@@ -40,7 +40,7 @@
         </div>
 
         <div class="footer-bottom">
-          <span>© ${year} <a href="https://cookieclickerz.github.io/">Cookie Clicker</a>. Free to play online Cookie Clicker Game.</span>
+          <span>© ${year} <a href="https://cookieclickerz.github.io/">Cookie Clicker Unblocked</a>. Free to play online Cookie Clicker Game.</span>
           <span>Made with 🍪 &amp; ❤️ | Cookie Clicker Online | Idle Clicker Game</span>
         </div>
       </div>
